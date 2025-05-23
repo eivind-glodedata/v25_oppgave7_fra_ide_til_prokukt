@@ -5,6 +5,7 @@ body {
 /* HEADER */
 header {
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
   }
@@ -15,13 +16,29 @@ header {
     padding: 10px;
     border-radius: 50%;
   }
+
+  .hamburgermeny {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: none;
+    
+}
+
+@media (min-width: 480px) {
+    .hamburgermeny {
+        display: block;
+    }
+
+    .aktiveringsknapp {
+        display: none;
+    }
+    
+}
   
   /* MAIN */
   section {
 
   }
   
-  /* Husk sett opp responsive 426px for column i mobil */
   .heroSection {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
@@ -41,7 +58,6 @@ header {
     align-items: flex-start;
   }
   
-  /* Om forbi column - separert div ikke nødvendig */
   .heroButtons {
     display: flex;
     flex-direction: column;
@@ -54,9 +70,10 @@ header {
     background-color: #1D7874;
   }
   
-  /* Trenger transition for smooth overgang */
-  .heroButtons button:hover {
+  /* Trenger transition for smooth overgang * background-color: #679289;*/
+  .heroButtons:hover {
     background-color: #679289;
+    transition-duration: 1s;
   }
   
   /* FOOTER */
